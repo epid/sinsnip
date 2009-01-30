@@ -8,7 +8,7 @@
         %li
           %a{:href => "s/#{s.id}"}
             .title= s.title
-            .info== Updated #{s.updated_at}
+            .info== Updated #{time_dist(Time.now, s.updated_at)} ago
   .side_section
     %h4 Most Viewed
     %ul
