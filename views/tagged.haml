@@ -1,5 +1,7 @@
 #main
-  %h2== Posts tagged #{@tag}
+  %h2
+    Posts tagged:
+    %em= @tag
   - @snippets.each do |s|
     .snip
       .snip_title== <a href="/s/#{s.id}">#{s.title}</a>
