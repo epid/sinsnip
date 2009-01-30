@@ -3,6 +3,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'sequel'
+require 'coderay'
 
 configure do
   Sequel.connect('sqlite://snippets.db')
