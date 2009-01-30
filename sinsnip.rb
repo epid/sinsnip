@@ -62,6 +62,7 @@ post '/e/:id' do
   snippet.tags = params[:tags]
   snippet.body = params[:body]
   # TODO snippet.language = params[:language]
+  snippet.updated_at = Time.now
   snippet.save
   redirect "/s/#{snippet.id}"
 end
