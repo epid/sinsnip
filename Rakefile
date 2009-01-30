@@ -19,4 +19,8 @@ task :make_snippets do
                   :body => "My fourth snippet",
                   :language => 'text',
                   :tags => 'tag4 tag6' )
+  Snippet[1].update(:updated_at => Time.now - 60*10)
+  Snippet[2].update(:updated_at => Time.now - 86400*12)
+  Snippet[3].update(:updated_at => Time.now - 86400)
+  Snippet[4].update(:updated_at => Time.now - 3600*8)
 end
