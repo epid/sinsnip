@@ -6,6 +6,11 @@ body
   :background-color = !light_black
   :color #FFF
   :font-family Helvetica, sans-serif
+  a
+    :color white
+    :text-decoration none
+    &:hover
+      :text-decoration underline
   #container
     :margin 10px auto 0px auto
     :width 1000px
@@ -39,11 +44,6 @@ body
           :float right
           :font-style italic
           :font-size 0.8em
-        a
-          :color white
-          :text-decoration none
-          &:hover
-            :text-decoration underline
     #sidebar
       :background-color = !blue - #222
       :padding 10px
