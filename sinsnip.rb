@@ -27,3 +27,10 @@ get '/stylesheets/layout.css' do
   content_type 'text/css', :charset => 'utf-8'
   sass :layout
 end
+
+get '/s/:snip' do
+  @snippet = Snippet[params[:snip]]
+  halt [ 404, "Page not found" ] unless @snippet
+  @snippet.view!
+  haml :show
+end

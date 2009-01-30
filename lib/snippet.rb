@@ -31,4 +31,7 @@ class Snippet < Sequel::Model
     order(:views.desc).limit( n )
   end
 
+  def view!
+    self.update(:views => (self.views+1))
+  end
 end

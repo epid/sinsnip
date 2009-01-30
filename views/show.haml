@@ -1,0 +1,12 @@
+#main
+  - s = @snippet
+  .snip
+    .snip_title== <a href='/s/#{s.id}'>#{s.title}</a>
+    .snip_body
+      %pre= s.body
+    .snip_foot
+      .snip_lang= s.language
+      .snip_tags
+        Tags:
+        - s.tags.split.each do |t|
+          == <a href='/t/#{t}'>#{t}</a>
