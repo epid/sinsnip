@@ -15,6 +15,7 @@ class Snippet < Sequel::Model
       string      :title
       text        :body
       string      :language
+      string      :tags
       integer     :views, :default => 0
       datetime    :created_at
       datetime    :updated_at
