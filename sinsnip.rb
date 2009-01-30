@@ -10,6 +10,7 @@ end
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/lib')
 require 'snippet'
+require 'helpers'
 
 before do
   @most_recent = Snippet.most_recent
@@ -18,7 +19,7 @@ end
 
 get '/' do
   @snippets = Snippet.all
-  haml :index
+  haml :main
 end
 
 get '/stylesheets/layout.css' do

@@ -1,0 +1,36 @@
+#main
+  .snip
+    .snip_title Snippet 1
+    .snip_body
+      %pre
+        :preserve
+          My first snippet
+          Line 2
+          Here is a long(ish) line - Let's see how it looks when it needs to wrap
+    .snip_foot
+      .snip_lang ruby
+      .snip_tags
+        Tags:
+        %a{:href => 't/tag1'}tag1
+        %a{:href => 't/tag2'}tag2
+  .snip
+    .snip_title Snippet 2
+    .snip_body
+      %pre My second snippet
+    .snip_foot
+      .snip_lang text
+      .snip_tags Tags: tag2 tag3 tag4
+  .snip
+    .snip_title Snippet 3
+    .snip_body
+      %pre Also, I'd like to see how the software handles the situation when text is really long and wraps lines
+    .snip_foot
+      .snip_lang rails
+      .snip_tags Tags: tag4 tag5
+  .snip
+    .snip_title Snippet 4
+    .snip_body
+      %pre My fourth snippet
+    .snip_foot
+      .snip_lang sql
+      .snip_tags Tags: tag5 tag6 tag7
