@@ -24,3 +24,7 @@ task :make_snippets do
   Snippet[3].update(:updated_at => Time.now - 86400)
   Snippet[4].update(:updated_at => Time.now - 3600*8)
 end
+desc "Reset the view counter for all snippets"
+task :reset_views do
+  Snippet.all.each { |s| s.update(:views => 0) }
+end
