@@ -1,7 +1,7 @@
 - rows = 25
 - cols = 85
 #main
-  %form{:action => 'new', :method => 'post', :name => 'edit'}
+  %form{:action => url, :method => 'post', :name => 'edit'}
     .edit
       %p.title
         Title<br />
@@ -11,5 +11,5 @@
         == <input type='text' size='#{cols}' name='tags' value='#{snippet.tags}' /><br />
       %p.body
         Snippet<br />
-        == <textarea name='body' rows='#{rows}' cols='#{cols}'>#{snippet.body}</textarea>
+        ~ "<textarea name='body' rows='#{rows}' cols='#{cols}'>#{snippet.body}</textarea>"
       <input type='submit' value='Save'>

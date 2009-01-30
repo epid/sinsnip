@@ -43,11 +43,25 @@ get '/t/:tag' do
 end
 
 get '/new' do
-  haml :edit, :locals => { :snippet => Snippet.new }
+  haml :edit, :locals => { :snippet => Snippet.new, :url => '/new' }
 end
 
 post '/new' do
   snippet = Snippet.new( :title => params[:title], :tags => params[:tags], :body => params[:body], :language => 'text' )
+  snippet.save
+  redirect "/s/#{snippet.id}"
+end
+
+get '/e/:id' do
+  haml :edit, :locals => { :snippet => Snippet[params[:id]], :url => "/e/#{params[:id]}" }
+end
+
+post '/e/:id' do
+  snippet = Snippet[params[:id]]
+  snippet.title = params[:title]
+  snippet.tags = params[:tags]
+  snippet.body = params[:body]
+  # TODO snippet.language = params[:language]
   snippet.save
   redirect "/s/#{snippet.id}"
 end
