@@ -1,0 +1,88 @@
+!beige = #eee9bf
+!blue = #006080
+!light_black = #1d1d1d
+
+body
+  :background-color = !light_black
+  :color #FFF
+  :font-family Helvetica, sans-serif
+  #container
+    :margin 10px auto 0px auto
+    :width 1000px
+    :height 800px
+    :border = 1px solid !beige
+    :background-color = !blue - #111
+    #header
+      :margin 10px
+      :color = !beige
+      :border-bottom = 1px solid !beige
+    #main
+      :margin 10px
+      :float left
+      :width 73%
+    .snip
+      .snip_title
+        :font-size 1.5em
+        :font-weight bold
+      .snip_body pre
+        :background-color = !light_black
+        :border = 1px solid !beige
+        :padding 5px
+        :margin 5px 0px 5px 5px
+        :font-size smaller
+      .snip_foot
+        :margin 0px 10px 25px 10px
+        .snip_lang
+          :float left
+          :font-size 0.9em
+        .snip_tags
+          :float right
+          :font-style italic
+          :font-size 0.8em
+        a
+          :color white
+          :text-decoration none
+          &:hover
+            :text-decoration underline
+    #sidebar
+      :background-color = !blue - #222
+      :padding 10px
+      :margin 10px 20px 10px 10px
+      :border = 2px solid !beige
+      :display inline
+      :float right
+      :text-align left
+      :width 19%
+      a#button
+        :margin-left 30px
+        :padding 3px 15px 3px 15px
+        :border = 1px solid !beige
+        :text-decoration none
+        :font-weight bold
+        &:link, &:active, &:visited
+          :color = !beige
+      h4
+        :color = !beige
+        :margin-bottom 10px
+        :margin-top 10px
+        :font-size 1.3em
+        :border-bottom = 1px solid !beige
+      ul
+        :list-style-image none
+        :list-style-position outside
+        :list-style-type none
+        :margin-left 0px
+        :padding 0px
+        a
+          :color white
+          :text-decoration none
+          .title
+            :font-weight bold
+          .info
+            :font-size 0.7em
+            :color #aaa
+      #tags
+        :list-style-type circle
+        :list-style-position inside
+        a:hover
+          :text-decoration underline
