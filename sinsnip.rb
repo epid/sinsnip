@@ -41,3 +41,13 @@ get '/t/:tag' do
   @snippets = Snippet.filter(:tags.like("%#{@tag}%"))
   haml :tagged
 end
+
+get '/new' do
+  haml :edit, :locals => { :snippet => Snippet.new }
+end
+
+post '/new' do
+  snippet = Snippet.new( :title => params[:title], :tags => params[:tags], :body => params[:body], :language => 'text' )
+  snippet.save
+  redirect "/s/#{snippet.id}"
+end
