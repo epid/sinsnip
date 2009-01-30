@@ -6,6 +6,7 @@ require 'sequel'
 
 configure do
   Sequel.connect('sqlite://snippets.db')
+  PREVIEW_LINES = 2
 end
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/lib')

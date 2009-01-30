@@ -34,4 +34,17 @@ class Snippet < Sequel::Model
   def view!
     self.update(:views => (self.views+1))
   end
+
+  def line_count
+    count = 0
+    self.body.each_line { |l| count += 1 }
+    count
+  end
+
+  def summary( max = PREVIEW_LINES )
+    lc = self.line_count
+    return self.body if lc <= max
+    self.body.match(/^(.*\n?){0,#{max}}/)[0]
+  end
+
 end
