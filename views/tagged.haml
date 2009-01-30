@@ -2,7 +2,7 @@
   %h2== Posts tagged #{@tag}
   - @snippets.each do |s|
     .snip
-      .snip_title== <a href='s/#{s.id}'>#{s.title}</a>
+      .snip_title== <a href="/s/#{s.id}">#{s.title}</a>
       .snip_body
         %pre= s.body
       .snip_foot
@@ -10,4 +10,4 @@
         .snip_tags
           Tags:
           - s.tags.split.each do |t|
-            == <a href='t/#{t}'>#{t}</a>
+            == <a href="/t/#{t}">#{t}</a>

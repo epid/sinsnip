@@ -6,7 +6,7 @@
     %ul
       - @most_recent.each do |s|
         %li
-          %a{:href => "s/#{s.id}"}
+          %a{:href => "/s/#{s.id}"}
             .title= s.title
             .info== Updated #{time_dist(Time.now, s.updated_at)} ago
   .side_section
@@ -14,7 +14,7 @@
     %ul
       - @most_viewed.each do |s|
         %li
-          %a{:href => "s/#{s.id}"}
+          %a{:href => "/s/#{s.id}"}
             .title= s.title
             .info== Viewed #{s.views} times
   .side_section
@@ -22,4 +22,4 @@
     %ul#tags
       - @tags.each do |t|
         %li
-          %a{:href => "t/#{t}"}= t
+          %a{:href => "/t/#{t}"}= t
