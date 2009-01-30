@@ -18,5 +18,5 @@ task :make_snippets do
   Snippet.create( :title => 'Snippet 4',
                   :body => "My fourth snippet",
                   :language => 'text',
-                  :tags => 'tag5 tag6' )
+                  :tags => 'tag4 tag6' )
 end

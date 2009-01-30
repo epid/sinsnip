@@ -15,6 +15,7 @@ require 'helpers'
 before do
   @most_recent = Snippet.most_recent
   @most_viewed = Snippet.most_viewed
+  @tags = Snippet.map(:tags).join(' ').split.uniq.sort
 end
 
 get '/' do
