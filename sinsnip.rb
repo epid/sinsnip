@@ -34,3 +34,9 @@ get '/s/:snip' do
   @snippet.view!
   haml :show
 end
+
+get '/t/:tag' do
+  @tag = params[:tag]
+  @snippets = Snippet.filter(:tags.like("%#{@tag}%"))
+  haml :tagged
+end
