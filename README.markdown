@@ -21,12 +21,12 @@ All you have to do is run the server, the database is automatically created for 
 
   $ ruby sinsnip.rb
 
-Open your web broswer and visit http://localhost:4567 and click the "New Snippet" button to get started.
+Open your web broswer and visit [http://localhost:4567](http://localhost:4567) and click the "New Snippet" button to get started.
 
 ## About
 
 Written by Jared Giles
 
-Based off of NavySnip (http://github.com/navyrain/navysnip)
+Based off of [NavySnip](http://github.com/navyrain/navysnip)
 
 Screenshots: [http://epid.github.com/sinsnip/sinsnip.png](http://epid.github.com/sinsnip/sinsnip.png)
