@@ -67,3 +67,8 @@ post '/e/:id' do
   snippet.save
   redirect "/s/#{snippet.id}"
 end
+
+delete '/d/:id' do
+  Snippet[params[:id]].destroy
+  redirect '/'
+end

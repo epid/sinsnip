@@ -12,4 +12,7 @@
           == <a href="/t/#{t}">#{t}</a>
     .edit
       %form{:method => 'get' ,:action => "/e/#{s.id}"}
-        <button type='submit'>Edit</button>
+        %button{:type => 'submit'} Edit
+      %form{:method => 'post', :action => "/d/#{s.id}"}
+        %input{:name => '_method', :value => 'delete', :type => 'hidden'}/
+        %button{:type => 'submit'} Delete
