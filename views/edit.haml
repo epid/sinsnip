@@ -1,4 +1,4 @@
-- rows = 25
+- rows = 23
 - cols = 85
 #main
   %form{:action => url, :method => 'post', :name => 'edit'}
@@ -9,6 +9,11 @@
       %p.tags
         Tags <em style="font-size:0.7em;">(space separated)</em><br />
         == <input type='text' size='#{cols}' name='tags' value='#{snippet.tags}' /><br />
+      %p.language
+        Language<br />
+        %select{:name => 'language'}
+          - CodeRay::Scanners.list.sort.each do |l|
+            == <option value='#{l}' #{'selected' if snippet.language == l}> #{l}</option>
       %p.body
         Snippet<br />
         ~ "<textarea name='body' rows='#{rows}' cols='#{cols}'>#{snippet.body}</textarea>"

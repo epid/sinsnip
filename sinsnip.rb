@@ -48,7 +48,7 @@ get '/new' do
 end
 
 post '/new' do
-  snippet = Snippet.new( :title => params[:title], :tags => params[:tags], :body => params[:body], :language => 'text' )
+  snippet = Snippet.new( :title => params[:title], :tags => params[:tags], :body => params[:body], :language => params[:language] )
   snippet.save
   redirect "/s/#{snippet.id}"
 end
@@ -62,7 +62,7 @@ post '/e/:id' do
   snippet.title = params[:title]
   snippet.tags = params[:tags]
   snippet.body = params[:body]
-  # TODO snippet.language = params[:language]
+  snippet.language = params[:language]
   snippet.updated_at = Time.now
   snippet.save
   redirect "/s/#{snippet.id}"
