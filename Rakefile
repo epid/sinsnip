@@ -16,8 +16,8 @@ task :make_snippets do
                   :language => 'text',
                   :tags => 'tag4 tag5 tag6' )
   Snippet.create( :title => 'Snippet 4',
-                  :body => "My fourth snippet",
-                  :language => 'text',
+                  :body => "puts \"hello \#{world}\"",
+                  :language => 'ruby',
                   :tags => 'tag4 tag6' )
   Snippet[1].update(:updated_at => Time.now - 60*10)
   Snippet[2].update(:updated_at => Time.now - 86400*12)
