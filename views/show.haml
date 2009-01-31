@@ -3,7 +3,7 @@
   .snip
     .snip_title== <a href="/s/#{s.id}">#{s.title}</a>
     .CodeRay
-      ~ CodeRay.scan(s.body, s.language).div
+      ~ CodeRay.scan(s.body, s.language).div :line_numbers => :table
     .snip_foot
       .snip_lang== Language: #{s.language}
       .snip_tags
