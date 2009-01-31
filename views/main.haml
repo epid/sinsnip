@@ -3,8 +3,8 @@
   - @snippets.each do |s|
     .snip
       .snip_title== <a href="/s/#{s.id}">#{s.title}</a>
-      .snip_body
-        = CodeRay.scan(s.summary, s.language).div
+      .CodeRay
+        ~ CodeRay.scan(s.summary, s.language).div
       .snip_foot
         .snip_lang= s.language
         .snip_tags
