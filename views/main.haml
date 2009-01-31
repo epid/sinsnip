@@ -6,7 +6,7 @@
       .CodeRay
         ~ CodeRay.scan(s.summary, s.language).div
       .snip_foot
-        .snip_lang= s.language
+        .snip_lang== Language: #{s.language}
         .snip_tags
           Tags:
           - s.tags.split.each do |t|
