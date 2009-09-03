@@ -1,14 +1,19 @@
 class Snippet < Sequel::Model
 
   # Validations
-  validates_presence_of :title, :body, :language
+  def validate
+    errors[:title] << "must be specified" if title.empty?
+    errors[:body] << "must be specfied" if body.empty?
+    errors[:language] << "must be specified" if language.empty?
+  end
 
   # Hooks
-  before_create do
+  def before_create
     self.created_at = Time.now
     self.updated_at = Time.now
   end
 
+  self.plugin(:schema)
   unless table_exists?
     set_schema do
       primary_key :id
