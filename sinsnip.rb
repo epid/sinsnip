@@ -3,6 +3,8 @@
 require 'rubygems'
 require 'sinatra'
 require 'sequel'
+require 'haml'
+require 'sass'
 require 'coderay'
 
 configure do
